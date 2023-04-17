@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão</title>
+</head>
+<body>
+    <h1>Faça seu palpite:</h1>
+     <div id="txtres"></div>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="number" name="resp" id="resp">
+    <input type="button" value="chutar" onclick="chutar()">
+    <script>
+        function chutar() {
+        var txn1 = document.getElementById('txtn1')
+        var txn2 = document.getElementById('txtn2')
+        var chu = document.getElementById('resp')
+        var n1 = Number(txtn1.value)
+        var n2 = Number(txtn2.value)
+        var chute = Number(chu.value)
+        som = n1+n2
+
+        if (chute == som) {
+          txtres.innerText = 'Acertou!'
+            
+        }
+        else {
+            txtres.innerText = 'Errou!'
+        }
+        }
+    </script>
+    
+    
+</body>
+</html>
